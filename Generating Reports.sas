@@ -1,3 +1,4 @@
+/*Import datafile*/
 PROC IMPORT DATAFILE="/home/u43103072/bsa570_v4_wk6_assignment_data.xlsx"
 		    OUT=bakerySales
 		    DBMS=XLSX
@@ -29,7 +30,7 @@ PROC TABULATE DATA = relevantBakerySales FORMAT=DOLLAR11.;
    KEYLABEL Sum=' ';
    FOOTNOTE "Historical data pertaining to existing product line.";
 RUN;
-
+/* SGPLOT procedure to create statistical graphic*/
 TITLE 'Two-Year Good For You! Bakery Sales Data';
 PROC SGPLOT DATA=relevantBakerySales;
   VBAR product / RESPONSE=sales GROUP=whenYouEnjoy GROUPDISPLAY=cluster 
