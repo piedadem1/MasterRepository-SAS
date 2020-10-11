@@ -1,4 +1,4 @@
-
+/*creats statement creates data view*/
 DATA bakerydata;
 LENGTH State $17 City $14;
    INFILE DATALINES DELIMITER=',';
@@ -259,10 +259,11 @@ Wisconsin,Madison,2017,84156
 Wyoming,Cheyenne,2017,45475
 ;
 
+/*prints the observations in a SAS data set*/
 PROC PRINT DATA=bakerydata;
 
 
-
+/*SQL used to group the data by state and sum the revenue of the business*/
 PROC SQL ;
 TITLE 'Bakery Sales By State';
 SELECT State, SUM(Revenue)  AS TotalRevenue 
