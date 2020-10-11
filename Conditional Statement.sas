@@ -13,7 +13,7 @@ DATA WORK.BAKERYSALES    ;
  product
  sales
 ;
-
+/*Defines Index*/
 DATA new;
 SET bakerysales;
 dateSlashFinder=FIND(strDate,"/");
@@ -21,7 +21,7 @@ dateCommaFinder=INDEX(strDate, ',');
 FORMAT productSales COMMA20.;
 FORMAT productName $30.;
 FORMAT date MMDDYY10.;
-/* */
+/*Solves for logic expression then Do group process and recall value*/
 IF dateCommaFinder = 0 THEN 
 	DO 
 	    date = input(strDate,MMDDYY10.);
