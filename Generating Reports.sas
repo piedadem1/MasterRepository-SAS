@@ -1,3 +1,5 @@
+
+/*Matthew Piedade*/
 /*Import datafile*/
 PROC IMPORT DATAFILE="/home/u43103072/bsa570_v4_wk6_assignment_data.xlsx"
 		    OUT=bakerySales
@@ -15,7 +17,7 @@ SET bakerySalesWithoutCookies;
 IF year(date) = 2015 OR year(date) = 2018 THEN DELETE;
 year=Year(date);
 ;
-
+/*Directs file*/
 ODS LISTING close;
 ODS HTML FILE = "/home/u43103072/bsa570_v4_wk6_assignment_data_HTML_report.htm";
 
