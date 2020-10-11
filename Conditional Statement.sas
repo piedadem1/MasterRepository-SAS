@@ -1,10 +1,10 @@
 DATA WORK.BAKERYSALES    ;
  INFILE '/home/u43103072/bsa570_v4_wk4_assignment_data.txt' DELIMITER = '|' MISSOVER DSD LRECL=32767 FIRSTOBS=2 ;
- /* INFORMAT statements do what? Specifies the informat for reading the values of the variables that are listed in the INFORMAT statement. */
+ /*Specifies the informat for reading the values of the variables that are listed in the INFORMAT statement. */
  INFORMAT strDate $30. ;
  INFORMAT product best32. ;
  INFORMAT sales nlnum32. ;
- /* FORMAT statements do what? Specifies the format that is listed for writing the values of the variables. */
+ /*Specifies the format that is listed for writing the values of the variables. */
  FORMAT strDate $30. ;
  FORMAT product best12. ;
  FORMAT sales nlnum12. ;
