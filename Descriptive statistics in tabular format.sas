@@ -1,3 +1,5 @@
+/*Matthew Piedade*/
+/*Import data*/
 DATA WORK.BAKERYSALES    ;
  INFILE '/home/u43103072/bsa570_v4_wk4_assignment_data.txt' DELIMITER = '|' MISSOVER DSD LRECL=32767 FIRSTOBS=2 ;
  /*Specifies the informat for reading the values of the variables that are listed in the INFORMAT statement. */
