@@ -21,7 +21,7 @@ year=Year(date);
 ODS LISTING close;
 ODS HTML FILE = "/home/u43103072/bsa570_v4_wk6_assignment_data_HTML_report.htm";
 
-/*Change the label from "when you enjoy" to "Success Indicators" from the dataset*/
+/*displays descriptive statistics in tabular format*/
 PROC TABULATE DATA = relevantBakerySales FORMAT=DOLLAR11.;
    CLASS product whenYouEnjoy year;
    VAR sales;
